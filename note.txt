@@ -1,0 +1,40 @@
+*** install nodemon globally for automated reload.
+Link : https://nodemon.io/
+
+Backend & Database connection ::
+Steps ::
+    01. [cmd] => npm init -y
+
+    02. [cmd] => npm install express mongodb cors dotenv
+
+    03. create index.js file in root folder
+
+    04. create (.env) file in root folder, add code -- [require('dotenv').config()] in index.js file.
+
+    05. [package.json] => add in script{} = {"start": "node index.js", "start-dev": "nodemon index.js"}
+
+    06. [MongoDB] => create database
+
+    07. [MongoDB] => Database Access: create database user with read-write access
+
+    08. [MongoDB] => Network Access: Set network access at 0.0.0.0
+
+    09. [MongoDB] => Connect database with index.js
+
+    10. Add [const cors = require('cors'); app.use(cors()); app.use(express.json());] in index.js
+
+    11. Follow => MongoDB Node Driver - Usage Example
+
+
+References ::
+    1. Express.js => https://expressjs.com/en/starter/hello-world.html
+
+    2. MongoDB Node driver => https://docs.mongodb.com/drivers/node/current/usage-examples/insertOne/
+
+***Important :: Client-Side, fetch => POST, PUT, DELETE operation [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch] => {method, headers, body} =>> (at least 3)
+
+
+Deploy :: Heroku
+Steps ::
+    01. Create Heroku account
+    02. 
